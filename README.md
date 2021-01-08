@@ -13,7 +13,6 @@ Trivia: This way of resizing images was pioneered by Google with the first versi
 Can be set via `config.json`.
 
 Runs as a docker container on port 3000.
-
 ## Resize an image
 
 http://some.domain/image.jpg
