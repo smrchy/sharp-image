@@ -91,7 +91,6 @@ class Mw {
 		const _finish = (data) => {
 			res.set({"Content-Type": res.locals.image_headers["content-type"]})
 			.send(data);
-			next();
 		};
 		if (!res.locals.image_size) {
 			_finish(res.locals.image_body);

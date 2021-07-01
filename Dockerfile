@@ -1,4 +1,4 @@
-FROM node:14.15.4-alpine as builder
+FROM node:14.17.1-alpine as builder
 
 RUN mkdir /src
 WORKDIR /src
@@ -9,7 +9,7 @@ COPY tsconfig.json /src/tsconfig.json
 RUN npm run build
 RUN rm -rf node_modules && npm install --production
 
-FROM node:14.15.4-alpine
+FROM node:14.17.1-alpine
 RUN addgroup -S appuser \
     && adduser -S -G appuser appuser \
     && mkdir /src \

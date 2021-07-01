@@ -14,17 +14,11 @@ app.listen(config.app.port);
 console.log("Listening on port ", config.app.port)
 import { mw } from "./mw";
 
-app.get("/image/*", mw.checkData, mw.loadImage, mw.processImage, (req, res, next) => {
-	next();
-});
+app.get("/image/*", mw.checkData, mw.loadImage, mw.processImage);
 
 app.get("/ping", (req, res) => {
 	res.send("PONG");
 })
-
-app.use( (req, res, next) => {
-	next();
-});
 
 // Generic error handle
 app.use( (err, req, res, next) => {
