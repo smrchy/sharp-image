@@ -3,7 +3,7 @@
   "version": "0.8.0",
   "description": "Sharp-Image Resizer",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "lodash": "^4.17.21 ",
     "morgan": "^1.10.0",
     "request": "^2.88.2",
